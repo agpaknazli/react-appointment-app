@@ -12,8 +12,8 @@ const Doctors = () => {
 <Row>
 {
 doctorData.map(({id,img,dep,name})=>{
-return<Col key={id}>
-<img src={img} alt="" />
+return<Col xs={6} md={4} ld={3} key={id}>
+<img className='doctor-img img-thumbnail' src={img} alt="" />
 <h5>{name}</h5>
 <h6>{dep}</h6>
 </Col>
