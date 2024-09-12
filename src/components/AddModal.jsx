@@ -1,4 +1,5 @@
 
+import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
@@ -11,6 +12,8 @@ function AddModal({handleClose, show,drName}) {
 
 //   const handleClose = () => setShow(false);
 //   const handleShow = () => setShow(true);
+const [name,Setname] =useState("")
+const [date, Setdate] =useState("")
 
   return (
     <>
