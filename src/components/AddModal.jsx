@@ -1,32 +1,52 @@
-import { useState } from 'react';
+
 import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 
-function AddModal() {
-  const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+function AddModal({handleClose, show,drName}) {
+
+    //*Doctor taşıdık
+//   const [show, setShow] = useState(false);
+
+//   const handleClose = () => setShow(false);
+//   const handleShow = () => setShow(true);
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      {/* <Button variant="primary" onClick={handleShow}>
         Launch demo modal
-      </Button>
+      </Button> */}
 
-      <Modal show={show} onHide={handleClose}>
+<Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Appointment for {drName}</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
+        <Modal.Body>
+        <Form>
+      <Form.Group className="mb-3" controlId="name">
+        <Form.Label>Patient Name:</Form.Label>
+        <Form.Control type="text" placeholder="date" />
+        
+      </Form.Group>
+
+      <Form.Group className="mb-3" controlId="date">
+        <Form.Label>Date:</Form.Label>
+        <Form.Control type="datetime-local" placeholder="Password" />
+      </Form.Group>
+      <div className='text-center  mb-3'>
+     <Button type='submit' variant="success" className='me-2' >
+            Save
           </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
+          <Button  type="button" variant="danger" onClick={handleClose}>
+           Close
           </Button>
-        </Modal.Footer>
+          
+          </div>
+    </Form>
+
+        </Modal.Body>
+        
       </Modal>
     </>
   );
