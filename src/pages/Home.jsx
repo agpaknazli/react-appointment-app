@@ -1,8 +1,10 @@
-import React from 'react'
-import AppointmentList from '../components/AppointmentList'
-import Doctors from '../components/Doctors'
-
+import React, { useState } from 'react';
+import AppointmentList from '../components/AppointmentList';
+import Doctors from '../components/Doctors';
+import {appointmentData} from '../helpers/data';
 const Home = () => {
+const[appointments,setAppointments]=useState(appointmentData)
+
   return (
    <main className='text-center mt-2'>
 
@@ -10,7 +12,7 @@ const Home = () => {
 
 <Doctors/>
 
-<AppointmentList/>
+<AppointmentList appointments={appointments}/>
 
 
 

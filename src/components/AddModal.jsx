@@ -12,9 +12,9 @@ function AddModal({handleClose, show,drName}) {
 
 //   const handleClose = () => setShow(false);
 //   const handleShow = () => setShow(true);
-const [name,Setname] =useState("")
-const [date, Setdate] =useState("")
-
+const [name,setName] =useState("")
+const [date, setDate] =useState("")
+console.log(name,date);
   return (
     <>
       {/* <Button variant="primary" onClick={handleShow}>
@@ -29,13 +29,13 @@ const [date, Setdate] =useState("")
         <Form>
       <Form.Group className="mb-3" controlId="name">
         <Form.Label>Patient Name:</Form.Label>
-        <Form.Control type="text" placeholder="date" />
+        <Form.Control onChange={(e)=>setName(e.target.vlue)} type="text" placeholder="date" />
         
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="date">
         <Form.Label>Date:</Form.Label>
-        <Form.Control type="datetime-local" placeholder="Password" />
+        <Form.Control type="datetime-local" placeholder="DATE" onChange={(e)=>setDate(e.target.value)} />
       </Form.Group>
       <div className='text-center  mb-3'>
      <Button type='submit' variant="success" className='me-2' >
