@@ -9,9 +9,15 @@ const handleAdd=(newAppointment)=>{
 };
 const handleDelete=(id)=>{
   const filteredList= appointments.filter((item)=>item.id !==id);
-  setAppointments([filteredList]);
-
+  setAppointments(filteredList);
 };
+const handleDoubleClick=(id)=>{
+const updatedList=appointments.map((app)=>
+app.id===id ? {...app,consulted: !app.consulted} : app);
+setAppointments(updatedList);
+
+
+}
 
   return (
    <main className='text-center mt-2'>
@@ -20,7 +26,7 @@ const handleDelete=(id)=>{
 
 <Doctors handleAdd={handleAdd}/>
 
-<AppointmentList appointments={appointments} handleDelete={handleDelete}/>
+<AppointmentList appointments={appointments} handleDelete={handleDelete} handleDoubleClick={handleDoubleClick}/>
 
 
 
