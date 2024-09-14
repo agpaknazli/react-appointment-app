@@ -3,14 +3,17 @@ import AppointmentList from '../components/AppointmentList';
 import Doctors from '../components/Doctors';
 import {appointmentData} from '../helpers/data';
 const Home = () => {
-const[appointments,setAppointments]=useState(appointmentData)
+const[appointments,setAppointments]=useState(appointmentData);
+const handleAdd=(newAppointment)=>{
+  setAppointments([...appointments,newAppointment])
+};
 
   return (
    <main className='text-center mt-2'>
 
    <h1 className='display-5 text-danger'>KİEL HOSPİTAL</h1>
 
-<Doctors/>
+<Doctors handleAdd={handleAdd}/>
 
 <AppointmentList appointments={appointments}/>
 
