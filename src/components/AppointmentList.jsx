@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { MdDelete } from "react-icons/md";
 
-const AppointmentList = ({appointments}) => {
+const AppointmentList = ({appointments,handleDelete}) => {
   return (
 <Container className='p-2'>
 
@@ -25,7 +25,7 @@ const AppointmentList = ({appointments}) => {
       </Col>
       
       <Col className='text-end'>
-      <MdDelete className='text-danger display-3 type="button"'/>
+      <MdDelete onClick={()=>handleDelete(id)} className='text-danger display-3 type="button"'/>
       </Col>
     </Row>
   </div>
