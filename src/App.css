@@ -25,11 +25,11 @@
 }
 
 .consulted {
-  border-left: 1rem solid rgb(56, 232, 12);
+  border-left: 1rem solid rgb(146, 231, 125);
 }
 .consulted::after {
   content: "CONSULTED";
-  background-color: rgba(235, 247, 8, 0.896);
+  background-color: rgba(234, 243, 60, 0.786);
   color: rgb(241, 10, 10);
   font-size: 2rem;
   border-radius: 1rem;
