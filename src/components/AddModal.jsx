@@ -7,6 +7,10 @@ import Modal from 'react-bootstrap/Modal';
 
 function AddModal({handleClose, show,drName, handleAdd}) {
 
+
+// function addmodel({handleSubmit})
+
+
     //*Doctor taşıdık
 //   const [show, setShow] = useState(false);
 
