@@ -30,7 +30,7 @@
 .consulted::after {
   content: "CONSULTED";
   background-color: rgba(234, 243, 60, 0.786);
-  color: rgb(241, 10, 10);
+  color: rgba(241, 10, 10, 0.956);
   font-size: 2rem;
   border-radius: 1rem;
   position: absolute;
